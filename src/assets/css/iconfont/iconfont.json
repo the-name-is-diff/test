@@ -1,0 +1,65 @@
+{
+  "id": "2871323",
+  "name": "tabbar-codewhy项目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "145471",
+      "name": "分类or广场or其他",
+      "font_class": "fenleiorguangchangorqita",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "145704",
+      "name": "分类or广场or其他_填充",
+      "font_class": "fenleiorguangchangorqitatianchong",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "577340",
+      "name": "购物车-fill",
+      "font_class": "gouwuchefill",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    },
+    {
+      "icon_id": "624530",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "3456455",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e70e",
+      "unicode_decimal": 59150
+    },
+    {
+      "icon_id": "11372716",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e8bb",
+      "unicode_decimal": 59579
+    },
+    {
+      "icon_id": "11372773",
+      "name": "我的",
+      "font_class": "wode1",
+      "unicode": "e8c6",
+      "unicode_decimal": 59590
+    },
+    {
+      "icon_id": "11372774",
+      "name": "首页",
+      "font_class": "shouye1",
+      "unicode": "e8c7",
+      "unicode_decimal": 59591
+    }
+  ]
+}
