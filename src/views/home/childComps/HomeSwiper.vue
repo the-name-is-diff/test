@@ -1,5 +1,13 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-23 09:58:03
+ * @LastEditTime: 2021-10-24 15:45:10
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VUE\project\supermall\src\views\home\childComps\HomeSwiper.vue
+-->
 <template>
-  <swiper>
+    <swiper>
     <swiper-item v-for="item in cbanners" :key="item.index">
       <a :href="item.link">
         <img :src="item.image" alt="">
@@ -26,6 +34,5 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
 </style>

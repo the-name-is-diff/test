@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-23 10:37:24
+ * @LastEditTime: 2021-10-25 09:57:35
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VUE\project\supermall\src\views\home\childComps\recommendView.vue
+-->
 <template>
   <div class="recommend">
     <div class="recommend-item" v-for="item in crecommend" :key="item.index">
@@ -27,10 +35,11 @@ export default {
   display: flex;
   text-align: center;
   font-size: 16px;
+  /* margin-top: -5px; */
 }
 .recommend-item img{
-  width: 5rem;
-  height: 5rem;
+  width: 70px;
+  height: 70px;
   margin-bottom: 0.2rem;
 }
 .recommend-item{

@@ -19,6 +19,9 @@
    line-height: 40px;
    text-align: center;
    box-shadow: 0px 2px 3px rgba(0,0,0,0.1);
+   position: sticky;
+   top:0;
+   z-index:1000;
  }
  .left , .right{
    width: 60px;

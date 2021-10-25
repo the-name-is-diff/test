@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-21 22:13:55
+ * @LastEditTime: 2021-10-24 14:43:35
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \VUE\project\supermall\src\components\common\tabbar\TabBar.vue
+-->
 <template>
   <div id="tab-bar">
     <slot></slot>
@@ -16,6 +24,7 @@ export default {
    background-color: #f6f6f6;
    height: 49px;
    position: fixed;
+   z-index: 1001;
    left: 0;
    right: 0;
    bottom: 0;
