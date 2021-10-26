@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-23 18:00:25
- * @LastEditTime: 2021-10-23 22:26:48
- * @LastEditors: your name
+ * @LastEditTime: 2021-10-26 18:33:03
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\components\content\tabControl\TabControl.vue
 -->
@@ -44,8 +44,6 @@ export default {
   display: flex;
   text-align: center;
   padding: 5px;
-  position: sticky;
-  top: 40px;
   background-color: #fff;
 }
 .tab-control-item{

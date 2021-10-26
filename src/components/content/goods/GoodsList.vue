@@ -1,8 +1,6 @@
 <template>
   <div class="goods-list">
-      <!-- <div class="goods-list-item"> -->
-        <goods-list-item v-for="item in goods" :key=item.index :items="item"></goods-list-item>
-      <!-- </div> -->
+        <goods-list-item v-for="item in goods" :key=item.index :items="item" ></goods-list-item>
   </div>
 </template>
 
@@ -27,6 +25,12 @@ export default {
 .goods-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-}
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+  /* flex-grow: 0; */
+  /* flex-shrink: 0; */
+  /* column-count: 2; */
+} 
+
 </style>

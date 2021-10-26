@@ -1,7 +1,17 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-21 20:47:50
+ * @LastEditTime: 2021-10-26 20:22:39
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \VUE\project\supermall\src\App.vue
+-->
 <template>
   <div id="app">
     <main-tab-bar></main-tab-bar>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 <script>
