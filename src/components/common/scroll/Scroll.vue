@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-24 15:13:32
- * @LastEditTime: 2021-10-24 21:00:36
+ * @LastEditTime: 2021-10-25 21:39:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\components\common\scroll\Scroll.vue
@@ -24,10 +24,10 @@ export default {
   },
   methods:{
     scrollTo(x,y,time=300){
-      this.scroll.scrollTo(x,y,time);
+      this.scroll&&this.scroll.scrollTo(x,y,time);
     },
     finishPullUp(){
-      this.scroll.finishPullUp();
+      this.scroll&&this.scroll.finishPullUp();
     }
   },
   mounted(){

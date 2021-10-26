@@ -5,7 +5,7 @@
       <home-swiper :cbanners="banner"></home-swiper>
       <recommend-view :crecommend="recommend"></recommend-view>
       <feature-view :crecommend="recommend"></feature-view>
-      <tab-control :titles="['流行','新款','竞选']" @tabclick="tabClick"></tab-control>
+      <tab-control :titles="['流行','新款','竞选']" @tabclick="tabClick" ref="tabControl"></tab-control>
       <goods-list :goods="goods[type].list" ></goods-list>
     </scroll>
     <back-top @click.native="upClick" v-show="isUpTopShow"></back-top>
@@ -48,7 +48,8 @@ export default {
         'sell':{page:0,list:[]}
       },
       type:'pop',
-      isUpTopShow : false
+      isUpTopShow : false,
+      topoffsetTop : 0,
     }
   },
   created(){
@@ -56,6 +57,12 @@ export default {
     this.getHomeGoods('pop');
     this.getHomeGoods('new');
     this.getHomeGoods('sell');
+  },
+  mounted(){
+    this.$bus.$on("itemImgLoad",()=>{
+      this.$refs.scroll.scroll.refresh()
+      });
+
   },
   methods:{
     /**
@@ -74,7 +81,10 @@ export default {
       getHomeGoods(type,page).then(res=>{
         this.goods[type].list.push(...res.data.data.list)
         this.goods[type].page += 1
+
+        this.$refs.scroll.finishPullUp();
       })
+      // this.$refs.scroll.finishPullUp();
     },
   /**
    * @description: 事件监听函数
@@ -103,6 +113,17 @@ export default {
     contentUp(){
       this.getHomeGoods(this.type)
       // console.log(123123123312132123);
+    },
+    debounce(func,delay){
+      let timer = null;
+      return function(...args){
+        if(timer){
+          clearTimeout(timer)
+        }
+        timer = setTimeout(()=>{
+          func()
+        },delay)
+      }
     }
   }
 }
