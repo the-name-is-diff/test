@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-10-21 21:49:01
+ * @LastEditTime: 2021-10-26 21:49:09
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \supermall\vue.config.js
+ */
 const path = require('path');        //引入path模块
 function resolve(dir){
     return path.join(__dirname,dir)  //path.join(__dirname)设置绝对路径
@@ -12,5 +20,13 @@ module.exports={
             .set('views',resolve('src/views'))
             .set('common',resolve('src/common'))
             .set('network',resolve('src/network'))
+    },
+    publicPath:"./",
+    css:{
+      loaderOptions:{
+        less:{
+          javascriptEnabled:true,
+        }
+      }
     }
 }
