@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-23 21:09:16
- * @LastEditTime: 2021-10-26 20:15:02
+ * @LastEditTime: 2021-10-26 22:38:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\components\content\goods\GoodsListItem.vue
 -->
 <template>
-  <div class="goods-item">
+  <div class="goods-item" @click="showdetail">
     <div class="item-content">
       <img :src="items.show.img" alt="" @load="imgLoad">
     <div class="item-info">
@@ -24,6 +24,9 @@ export default {
   methods:{
     imgLoad(){
       this.$bus.$emit("itemImgLoad")
+    },
+    showdetail(){
+      this.$router.push('/detail/'+this.items.iid)
     }
   },
   props:{
