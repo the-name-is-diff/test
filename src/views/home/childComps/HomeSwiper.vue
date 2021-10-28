@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-23 09:58:03
- * @LastEditTime: 2021-10-26 18:35:34
+ * @LastEditTime: 2021-10-27 20:05:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\views\home\childComps\HomeSwiper.vue
@@ -19,6 +19,7 @@
 <script>
 import {Swiper , SwiperItem} from 'components/common/swiper/index.js'
 export default {
+  name:'HomeSwiper',
   dtat(){
     return {
     //  isLoadOver:false,

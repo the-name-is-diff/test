@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-23 10:37:24
- * @LastEditTime: 2021-10-25 09:57:35
+ * @LastEditTime: 2021-10-27 20:05:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\views\home\childComps\recommendView.vue
@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name:'recommendView',
   props:{
     crecommend:{
       type:Array,

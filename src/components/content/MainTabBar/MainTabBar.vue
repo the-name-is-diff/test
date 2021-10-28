@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-21 22:14:33
+ * @LastEditTime: 2021-10-27 20:08:02
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \supermall\src\components\content\MainTabBar\MainTabBar.vue
+-->
 <template>
   <tab-bar>
     <tab-bar-item path="/home">
@@ -27,6 +35,7 @@
 import TabBar from 'components/common/tabbar/TabBar'
 import TabBarItem from 'components/common/tabbar/TabBarItem'
 export default {
+  name:'MainTabBar',
   components:{
     TabBar,
     TabBarItem

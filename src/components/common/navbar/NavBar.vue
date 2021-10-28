@@ -1,25 +1,16 @@
-<!--
- * @Author: your name
- * @Date: 2021-10-22 20:04:59
- * @LastEditTime: 2021-10-26 18:50:45
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \VUE\project\supermall\src\components\common\navbar\NavBar.vue
--->
+
  <template>
-   <div class="nav-bar">
-     <div class="left"><slot name="left"></slot></div>
-     <div class="center"><slot name="center"></slot></div>
-     <div class="right"><slot name="right"></slot></div>
-   </div>
- </template>
- 
- <script>
- export default {
- 
- }
- </script>
- 
+  <div class="nav-bar">
+    <div class="left"><slot name="left"></slot></div>
+    <div class="center"><slot name="center"></slot></div>
+    <div class="right"><slot name="right"></slot></div>
+  </div>
+</template>
+<script>
+export default {
+  name:'NavBar',
+}
+</script>
  <style>
  .nav-bar{
    display: flex;

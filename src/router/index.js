@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-21 20:47:50
- * @LastEditTime: 2021-10-26 22:35:26
+ * @LastEditTime: 2021-10-27 19:58:02
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\router\index.js
@@ -21,7 +21,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path:'',
-    redirect:'/home'
+    redirect:'/home',
   },
   {
     path:'/test/dist',
@@ -29,7 +29,7 @@ const routes = [
   },
   {
     path:'/home',
-    component:Home
+    component:Home,
   },
   {
     path:'/category',

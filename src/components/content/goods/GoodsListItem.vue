@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-23 21:09:16
- * @LastEditTime: 2021-10-26 22:38:17
+ * @LastEditTime: 2021-10-27 20:29:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\components\content\goods\GoodsListItem.vue
@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  name:'GoodsListItem',
   methods:{
     imgLoad(){
       this.$bus.$emit("itemImgLoad")

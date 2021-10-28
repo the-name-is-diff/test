@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-21 23:06:24
- * @LastEditTime: 2021-10-24 16:12:05
+ * @LastEditTime: 2021-10-27 20:07:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\views\category\category.vue
@@ -115,7 +115,9 @@
 
 <script>
   import BScroll from 'better-scroll'
+  
 export default {
+  name:'category',
   mounted(){
     let wrapper = document.querySelector(".wrapper")
     let bs = new BScroll(wrapper,{

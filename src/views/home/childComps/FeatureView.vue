@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-23 11:19:27
+ * @LastEditTime: 2021-10-27 20:05:03
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \supermall\src\views\home\childComps\FeatureView.vue
+-->
 <template>
 
   <div class="feature">
@@ -25,6 +33,7 @@
 
 <script>
 export default {
+  name:'FeatureView',
   data(){
     return {
 

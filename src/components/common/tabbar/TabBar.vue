@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-21 22:13:55
- * @LastEditTime: 2021-10-24 14:43:35
- * @LastEditors: your name
+ * @LastEditTime: 2021-10-27 20:09:04
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\components\common\tabbar\TabBar.vue
 -->
@@ -15,6 +15,7 @@
 <script>
   import TabBarItem from './TabBarItem.vue'
 export default {
+  name:'TabBar'
 }
 </script>
 

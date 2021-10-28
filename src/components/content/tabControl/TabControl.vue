@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-23 18:00:25
- * @LastEditTime: 2021-10-26 18:33:03
+ * @LastEditTime: 2021-10-27 20:07:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\components\content\tabControl\TabControl.vue
@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  name:'TabControl',
   data(){
     return {
       currentIndex : 0

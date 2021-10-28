@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-24 17:20:41
- * @LastEditTime: 2021-10-24 18:26:47
+ * @LastEditTime: 2021-10-27 21:41:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\components\content\backTop\BackTop.vue
@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name:'BackTop',
 
 }
 </script>

@@ -9,7 +9,7 @@
       <tab-control :titles="['流行','新款','竞选']" @tabclick="tabClick" ref="tabControl"></tab-control>
       <goods-list :goods="goods[type].list" ></goods-list>
     </scroll>
-    <back-top @click.native="upClick" v-show="isUpTopShow"></back-top>
+      <back-top @click.native="upClick" v-show="isUpTopShow"></back-top>
   </div>
 </template>
 
@@ -29,6 +29,7 @@
     getHomeGoods
   } from 'network/home.js'
 export default {
+  name:"home",
   components:{
     NavBar,
     HomeSwiper,
@@ -65,6 +66,9 @@ export default {
       this.$refs.scroll.scroll.refresh()
       });
 
+  },
+  destroyed(){
+    console.log('组件已销毁');
   },
   methods:{
     /**
@@ -130,7 +134,7 @@ export default {
       }
     },
     SwiperLoad(){
-      this.topoffsetTop = this.$refs.tabControl.$el.offsetTop -20
+      this.topoffsetTop = this.$refs.tabControl.$el.offsetTop 
       console.log(this.topoffsetTop);
     }
   }
