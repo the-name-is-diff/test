@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-27 14:59:03
- * @LastEditTime: 2021-10-28 20:32:25
+ * @LastEditTime: 2021-10-29 09:46:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\network\detail.js
@@ -32,5 +32,14 @@ export class Shop{
     this.cSells = shopInfo.cSells;
     this.cGoods = shopInfo.cGoods;
     this.score = shopInfo.score;
+  }
+}
+
+export class GoodsParams{
+  constructor(itemParams){
+    
+    this.key = itemParams.info.key;
+    this.tables = itemParams.rule.tables[0]
+    this.set = itemParams.info.set
   }
 }

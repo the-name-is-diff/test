@@ -4,7 +4,7 @@
      <!-- <tab-control :titles="['流行','新款','竞选']" @tabclick="tabClick" v-show="istabshow"  class="tab-control1"></tab-control> -->
     <scroll class="content" ref="scroll" @scroll="contentscroll" @pullingUp="contentUp">
       <div>
-        <home-swiper :cbanners="banner" ref="hSwiper" @swiperImgLoad="imgLoad"></home-swiper>
+        <home-swiper :cbanners="banner" ref="hSwiper" @imgLoad="swiperImgLoad"></home-swiper>
         <recommend-view :crecommend="recommend"></recommend-view>
         <feature-view :crecommend="recommend"></feature-view>
         <tab-control :titles="['流行','新款','竞选']" @tabclick="tabClick" ref="tabControl"></tab-control>
@@ -119,8 +119,6 @@ export default {
       this.isUpTopShow = position.y <-1000
       this.istabshow = position.y < -this.topoffsetTop 
       console.log(position);
-      console.log(this.topoffsetTop);
-      console.log(document.querySelector('.tab-control1').offsetTop);
     },
     contentUp(){
       this.getHomeGoods(this.type)

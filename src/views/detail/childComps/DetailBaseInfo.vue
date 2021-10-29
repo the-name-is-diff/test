@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-27 22:15:18
- * @LastEditTime: 2021-10-28 19:53:08
+ * @LastEditTime: 2021-10-29 09:19:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\detail\childComps\DetailBaseInfo.vue
@@ -22,18 +22,11 @@
       </div>
     </div>
     <div class="services">  
-      <div class="service-item">
-        <img :src="cGoods.services[1].icon" alt="">
-        <span>{{cGoods.services[1].name}} </span>
+      <div class="service-item" v-for="item in cGoods.services" :key="item.index">
+        <img :src="item.icon" alt="">
+        <span>{{item.name}} </span>
       </div>
-        <div class="service-item">
-        <img :src="cGoods.services[2].icon" alt="">
-        <span>{{cGoods.services[2].name}} </span>
-        </div>
-        <div class="service-item">
-        <img :src="cGoods.services[3].icon" alt="">
-        <span>{{cGoods.services[3].name}} </span>
-        </div>
+
     </div>
   </div>
 </template>
