@@ -1,15 +1,15 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-23 09:44:31
- * @LastEditTime: 2021-10-27 21:04:41
+ * @LastEditTime: 2021-10-28 17:38:28
  * @LastEditors: your name
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\components\common\swiper\SwiperItem.vue
 -->
 <template>
-    <div class="slide">
-      <slot></slot>
-    </div>
+  <div class="slide">
+    <slot></slot>
+  </div>
 </template>
 
 <script>

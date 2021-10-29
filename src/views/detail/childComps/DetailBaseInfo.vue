@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-27 22:15:18
- * @LastEditTime: 2021-10-27 23:27:48
+ * @LastEditTime: 2021-10-28 19:53:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\detail\childComps\DetailBaseInfo.vue
@@ -30,7 +30,10 @@
         <img :src="cGoods.services[2].icon" alt="">
         <span>{{cGoods.services[2].name}} </span>
         </div>
-      
+        <div class="service-item">
+        <img :src="cGoods.services[3].icon" alt="">
+        <span>{{cGoods.services[3].name}} </span>
+        </div>
     </div>
   </div>
 </template>
@@ -38,20 +41,24 @@
 <script>
 export default {
   mounted(){
-    console.log(this.cGoods);
+    // console.log(this.cGoods);
   },
   props:{
-    cGoods:null,
+    cGoods:{},
   }
 }
 </script>
 
 <style scoped>
+.DetailNaseInfo{
+  margin-top: 10px;
+}
 .title{
   color: black;
   font-size: 18px;
 }
 .price{
+  margin: 10px 0;
   align-items: center;
 }
 .nowprice{
@@ -61,7 +68,7 @@ export default {
 }
 .highprice{
   text-decoration-line: line-through;
-  font-size: 14px;
+  font-size: 12px;
   color: gray;
   align-items: center;
 }
@@ -70,21 +77,30 @@ export default {
   margin: 15px 0;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-top: 10px;
   border-bottom: 2px solid #eee;
+  font-size: 12px;
+  line-height: 40px;
+  align-items: center;
 }
 .service-item{
-  height: 20px;
-  line-height: 20px;
+  /* line-height: 20px; */
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  line-height: normal;
 }
 .service-item img {
   height: 15px;
+  margin-right: 5px;
 }
 .services{
   display: flex;
   height: 40px;
-  padding-bottom: 10px;
+  padding-top: 10px;
   justify-content: space-between;
   border-bottom: 7px #eee solid;
+  font-size: 12px;
+  
 }
 </style>

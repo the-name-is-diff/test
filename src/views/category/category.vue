@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-21 23:06:24
- * @LastEditTime: 2021-10-27 20:07:00
+ * @LastEditTime: 2021-10-28 12:33:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\views\category\category.vue
 -->
 <template>
   <div class="wrapper">
-    <ul>
+      <ul>
       <li>列表1</li>
       <li>列表2</li>
       <li>列表3</li>
@@ -110,29 +110,21 @@
       <li>列表99</li>
       <li>列表100</li>
     </ul>
+
   </div>
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
+  import Scroll from 'components/common/scroll/Scroll.vue'
   
 export default {
+
   name:'category',
+  components:{
+    Scroll,
+  },
   mounted(){
-    let wrapper = document.querySelector(".wrapper")
-    let bs = new BScroll(wrapper,{
-      probeType:3,
-      pullUpLoad: true
-    })
-    bs.on('scroll',(position)=>{
-      console.log(position.x,position.y);
-    })
-    bs.on('pullingUp',()=>{
-      console.log('上拉加载更多');
-      setTimeout(()=>{
-         bs.finishPullUp();
-      },5000)
-    })
+    
   }
 }
 </script>

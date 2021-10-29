@@ -1,13 +1,15 @@
 <template>
   <div class="home">
     <nav-bar class="home-nav"><div slot="center">购物车</div></nav-bar>
-     <tab-control :titles="['流行','新款','竞选']" @tabclick="tabClick" v-show="istabshow"  class="tab-control1"></tab-control>
+     <!-- <tab-control :titles="['流行','新款','竞选']" @tabclick="tabClick" v-show="istabshow"  class="tab-control1"></tab-control> -->
     <scroll class="content" ref="scroll" @scroll="contentscroll" @pullingUp="contentUp">
-      <home-swiper :cbanners="banner" @swiperImgLoad="SwiperLoad"></home-swiper>
-      <recommend-view :crecommend="recommend"></recommend-view>
-      <feature-view :crecommend="recommend"></feature-view>
-      <tab-control :titles="['流行','新款','竞选']" @tabclick="tabClick" ref="tabControl"></tab-control>
-      <goods-list :goods="goods[type].list" ></goods-list>
+      <div>
+        <home-swiper :cbanners="banner" ref="hSwiper" @swiperImgLoad="imgLoad"></home-swiper>
+        <recommend-view :crecommend="recommend"></recommend-view>
+        <feature-view :crecommend="recommend"></feature-view>
+        <tab-control :titles="['流行','新款','竞选']" @tabclick="tabClick" ref="tabControl"></tab-control>
+        <goods-list :goods="goods[type].list" ></goods-list>
+      </div>
     </scroll>
       <back-top @click.native="upClick" v-show="isUpTopShow"></back-top>
   </div>
@@ -62,14 +64,15 @@ export default {
     this.getHomeGoods('sell');
   },
   mounted(){
-    this.$bus.$on("itemImgLoad",()=>{
-      this.$refs.scroll.scroll.refresh()
-      });
-
+    
   },
-  destroyed(){
-    console.log('组件已销毁');
-  },
+   activated() {
+      this.$refs.hSwiper.startTimer()
+    },
+    deactivated() {
+      console.log("deactivated被执行");
+      this.$refs.hSwiper.stopTimer()
+    },
   methods:{
     /**
      * @description: 网络请求函数
@@ -117,25 +120,13 @@ export default {
       this.istabshow = position.y < -this.topoffsetTop 
       console.log(position);
       console.log(this.topoffsetTop);
+      console.log(document.querySelector('.tab-control1').offsetTop);
     },
     contentUp(){
       this.getHomeGoods(this.type)
-      // console.log(123123123312132123);
     },
-    debounce(func,delay){
-      let timer = null;
-      return function(...args){
-        if(timer){
-          clearTimeout(timer)
-        }
-        timer = setTimeout(()=>{
-          func()
-        },delay)
-      }
-    },
-    SwiperLoad(){
-      this.topoffsetTop = this.$refs.tabControl.$el.offsetTop 
-      console.log(this.topoffsetTop);
+    swiperImgLoad(){
+      this.$refs.scroll.scroll.refresh();
     }
   }
 }

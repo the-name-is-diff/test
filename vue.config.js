@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-21 21:49:01
- * @LastEditTime: 2021-10-26 21:49:09
+ * @LastEditTime: 2021-10-28 11:43:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\vue.config.js

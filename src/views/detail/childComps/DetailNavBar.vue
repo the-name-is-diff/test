@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-26 23:03:57
- * @LastEditTime: 2021-10-27 10:15:28
+ * @LastEditTime: 2021-10-28 12:31:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\detail\childComps\DetailNavBar.vue
@@ -35,7 +35,7 @@ export default {
       console.log(this.currentIndex);
     },
     back(){
-      this.$router.back()
+      this.$router.go(-1)
     }
   },
   components:{

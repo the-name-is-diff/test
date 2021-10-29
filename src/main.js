@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-10-21 20:47:50
- * @LastEditTime: 2021-10-25 19:54:11
- * @LastEditors: your name
+ * @LastEditTime: 2021-10-28 12:35:06
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\main.js
  */
