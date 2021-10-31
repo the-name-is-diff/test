@@ -70,7 +70,6 @@ export default {
       this.$refs.hSwiper.startTimer()
     },
     deactivated() {
-      console.log("deactivated被执行");
       this.$refs.hSwiper.stopTimer()
     },
   methods:{
@@ -118,7 +117,6 @@ export default {
     contentscroll(position){
       this.isUpTopShow = position.y <-1000
       this.istabshow = position.y < -this.topoffsetTop 
-      console.log(position);
     },
     contentUp(){
       this.getHomeGoods(this.type)

@@ -21,7 +21,7 @@ module.exports={
             .set('common',resolve('src/common'))
             .set('network',resolve('src/network'))
     },
-    publicPath:"./",
+    publicPath:"/",
     css:{
       loaderOptions:{
         less:{

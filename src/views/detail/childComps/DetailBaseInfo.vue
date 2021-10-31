@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-27 22:15:18
- * @LastEditTime: 2021-10-29 09:19:34
+ * @LastEditTime: 2021-10-29 22:49:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\detail\childComps\DetailBaseInfo.vue
 -->
 <template>
-  <div class="DetailNaseInfo">
+  <div class="DetailNaseInfo" v-if="cGoods">
     <div class="title">{{cGoods.title}} </div>
     <div class="price">
       <span class="nowprice">￥ {{cGoods.lowprice}} </span>

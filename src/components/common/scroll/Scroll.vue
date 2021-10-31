@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-24 15:13:32
- * @LastEditTime: 2021-10-28 16:45:15
+ * @LastEditTime: 2021-10-30 16:14:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\components\common\scroll\Scroll.vue
@@ -24,7 +24,6 @@ export default {
     }
   },
   created(){
-    console.log("scroll创建啊");
   },
   mounted() {
 		  setTimeout(this.__initScroll, 20)

@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-28 20:22:30
- * @LastEditTime: 2021-10-28 22:08:44
+ * @LastEditTime: 2021-10-29 22:50:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\detail\childComps\DetailShopInfo.vue
 -->
 <template>
-  <div class="DetailShopInfo">
+  <div class="DetailShopInfo" v-if="cShopInfo">
     <div class="shopHeader">
       <div class="logo">
         <img :src="cShopInfo.logo" alt="">

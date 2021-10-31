@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-23 21:09:16
- * @LastEditTime: 2021-10-28 12:32:26
+ * @LastEditTime: 2021-10-29 22:21:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \VUE\project\supermall\src\components\content\goods\GoodsListItem.vue
@@ -9,7 +9,7 @@
 <template>
   <div class="goods-item" @click="showdetail">
     <div class="item-content">
-      <img :src="items.show.img" alt="" @load="imgLoad">
+      <img :src="showImage" alt="" @load="imgLoad">
     <div class="item-info">
       <p class="title">{{items.title}} </p>
       <span class="price">￥ {{items.price}} </span>
@@ -27,7 +27,8 @@ export default {
       this.$bus.$emit("itemImgLoad")
     },
     showdetail(){
-      this.$router.push('/detail/'+this.items.iid)
+        this.$router.push('/detail/'+this.items.iid || this.items.item_id)
+      
     }
   },
   props:{
@@ -36,6 +37,11 @@ export default {
       default(){
         return {}
       }
+    }
+  },
+  computed:{
+    showImage(){
+      return this.items.image  || this.items.show.img
     }
   }
 }

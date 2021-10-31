@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-29 08:57:01
- * @LastEditTime: 2021-10-29 16:53:01
+ * @LastEditTime: 2021-10-29 22:51:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\detail\childComps\DetailGoodsParams.vue
 -->
 <template>
-  <div class="DetailGoodsParams">
+  <div class="DetailGoodsParams" v-if="cGoodsParams">
     <div class="title">尺码表</div>
     <table class="sizes">
       <tr v-for="item in cGoodsParams.tables" :key="item.index">

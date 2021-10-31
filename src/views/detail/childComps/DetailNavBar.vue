@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-26 23:03:57
- * @LastEditTime: 2021-10-28 12:31:14
+ * @LastEditTime: 2021-10-30 20:14:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\detail\childComps\DetailNavBar.vue
@@ -26,13 +26,14 @@ export default {
   data(){
     return {
       titles:['商品','参数','评论','推荐'],
-      currentIndex : 0
+      currentIndex : 0,
+      TopYs:[]
     }
   },
   methods:{
     titleClick(index){
-      this.currentIndex = index 
-      console.log(this.currentIndex);
+      this.currentIndex = index;
+      this.$emit('titleClick',index);
     },
     back(){
       this.$router.go(-1)
@@ -46,6 +47,10 @@ export default {
 </script>
 
 <style>
+#DetailNavDetail{
+  width: 100%;
+  background-color: #fff;
+}
 .leftback{
   width: 30px;
   margin-top: 4px;
@@ -59,6 +64,6 @@ export default {
   flex: 1;
 }
 .active{
-  color: red
+  color: blue
 }
 </style>
