@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-26 22:09:19
- * @LastEditTime: 2021-10-30 22:13:46
+ * @LastEditTime: 2021-11-01 22:14:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\detail\Detail.vue
@@ -18,7 +18,7 @@
       <detail-goods-comments :cGoodsComments="GoodsComments" ref="comments"></detail-goods-comments>
       <goods-list :goods="Recommend" ref="recommend"></goods-list>
     </scroll>
-      <detail-bottom-bar></detail-bottom-bar>
+      <detail-bottom-bar @addToCart="addCart"></detail-bottom-bar>
   </div>
 </template>
 
@@ -86,6 +86,18 @@ export default {
         console.log(this.currentIndex);
         }
       }
+    },
+    addCart(){
+      const product = {}
+      product.images = this.topImages[0];
+      product.iid = this.iid;
+      product.title = this.Goods.title;
+      product.desc = this.Goods.desc
+      product.price = this.Goods.lowprice;
+      product.count = 1;
+      product.checked = true;
+      this.$store.dispatch('addCart',product)
+      
     }
   },
   components:{

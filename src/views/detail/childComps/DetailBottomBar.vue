@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-30 21:56:03
- * @LastEditTime: 2021-10-30 22:15:44
+ * @LastEditTime: 2021-10-31 16:05:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\detail\childComps\DetailBottomBar.vue
@@ -22,7 +22,7 @@
       <p>收藏</p>
     </div>
     </div>
-    <div class="function-wrapper">
+    <div class="function-wrapper" @click="addToCart">
       <div class="shopcart">
       <span>加入购物车</span>
     </div>
@@ -35,7 +35,11 @@
 
 <script>
 export default {
-
+  methods:{
+    addToCart(){
+      this.$emit('addToCart')
+    }
+  }
 }
 </script>
 
